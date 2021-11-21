@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: black;
+}
+.navbar a {
+  color:  white;
+}
+.navbar a:visited {
+  color:  orange;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

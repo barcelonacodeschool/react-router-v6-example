@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Home from './Home'
+import About from './About'
+import Contacts from './Contacts'
+import Navbar from './Navbar'
+import Footer from './Footer'
+import SingleProduct from './SingleProduct'
 
-function App() {
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom'
+
+export default function App() {
+
+  const [isLoggedIn]=useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='App'>
+    <Router>
+    <Navbar />
+    <Routes>
+    <Route path='/' element={<Home/>} />
+    <Route path='/about' element={<About year={2020} />} />
+    <Route path='/contact' element ={ !isLoggedIn ? <Navigate to='/' /> : <Contacts/> } />
+    <Route path='/singleproduct/:product' element={<SingleProduct/>} />
+    </Routes>
+    </Router>
+
+    <Footer />
     </div>
-  );
+
+    )
 }
 
-export default App;
