@@ -1,11 +1,15 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, useNavigate} from 'react-router-dom'
 
 const SingleProduct = (props)=>{
 
-	let params = useParams();
+	const params = useParams();
+	const navigate = useNavigate()
 
-	return <h1>Product id coming via url: {params.product}</h1>
+	return <>
+	<h1>Product id coming via url: {params.product}</h1>
+	<p onClick={() => navigate("/")}>Go home</p>
+	</>
 }
 
 
