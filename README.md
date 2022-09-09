@@ -1,4 +1,4 @@
-React Router v6 example with passing props
+React Router v6 example with passing params via URLs
 
 > intentionally not working with surge for direct urls of routes
 
