@@ -7,3 +7,5 @@ https://react-router-with-dynamic-route-with-fi.surge.sh
 > fixed for surge with direct urls of routes:
 
 https://react-router-with-dynamic-route-with-fix.surge.sh
+
+Explanations: https://dev.to/bcncodeschool/publishing-front-end-app-with-react-router-on-surge-44dn
